@@ -1,0 +1,96 @@
+<template>
+  <div>
+    <div>
+      <button class="btn btn-default" @click="goBack">Back</button>
+      <button class="btn btn-default" :disabled="!object" @click="addToCart(object)">Add To Cart</button>
+    </div>
+    <hr>
+    <div v-if="!isLoading">
+      <form class="form form-horizontal">
+        <div class="form-group">
+          <label for="" class="control-label col-md-3">ID</label>
+          <div class="col-md-6">
+            <input class="form-control" type="text" v-model="object.id" readonly>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-3">Name</label>
+          <div class="col-md-6">
+            <input class="form-control" type="text" v-model="object.name" readonly>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-3">price</label>
+          <div class="col-md-6">
+            <input type="text" class="form-control" v-model="object.price" readonly>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-3">Publish Year</label>
+          <div class="col-md-6">
+            <input type="text" class="form-control" v-model="object.publishYear" readonly>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div v-else>
+      <Loading></Loading>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Loading } from './common';
+import { mapState, mapMutations, mapActions } from 'vuex';
+import { MutationTypes } from '../constants';
+
+export default {
+  name: 'Detail',
+  data() {
+    return {
+      objId: null,
+    }
+  },
+  components: {
+    Loading
+  },
+  methods: {
+    initialize: function() {
+      this.objId = this.$route.params.id;
+      this.getObj(this.objId);
+    },
+    goBack: function () {
+      this.$router.push('/list');
+    },
+    goTo: function (id) {
+      this.$router.push({name: 'detail', params: {id}});
+    },
+    ...mapActions({
+      getObj: MutationTypes.GET_OBJECT_BY_ID
+    }),
+    ...mapMutations({
+      addToCart: MutationTypes.ADD_TO_CART
+    }),
+  },
+  computed: {
+    ...mapState([
+      'object',
+      'isLoading',
+    ]),
+  },
+  mounted() {
+    this.initialize();
+  },
+  beforeRouteUpdate(to, from, next) {
+    next();
+    this.initialize();
+  },
+}
+</script>
+
+<style>
+</style>
