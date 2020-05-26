@@ -17,7 +17,7 @@
           </td>
           <td>{{obj.price}}</td>
           <td>
-            <button class="btn btn-default" @click="addToCart(obj)">Add to Cart</button>
+            <button class="btn btn-default" @click="onClickAdd(obj)">Add to Cart</button>
           </td>
         </tr>
       </tbody>
@@ -33,15 +33,30 @@ export default {
   name: "List",
   data() {
     return {
+      
     };
   },
   methods: {
     ...mapActions({
-      getObjList: MutationTypes.GET_OBJECT_LIST
+      getObjList: MutationTypes.GET_OBJECT_LIST,
+      addToCart: MutationTypes.ADD_TO_CART,
     }),
     ...mapMutations({
-      addToCart: MutationTypes.ADD_TO_CART
     }),
+    successNotification() {
+      this.$notify({
+        title: 'Successfully',
+        message: 'Add to cart successfully!',
+        type: 'success',
+      });
+    },
+    onClickAdd(object) {
+      this.addToCart(object).then(() => {
+        this.successNotification();
+      }).catch((err) => {
+        console.log('err :>> ', err);
+      });
+    }
   },
   mounted() {
     this.getObjList();

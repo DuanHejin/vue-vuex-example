@@ -3,6 +3,9 @@ import {
   List,
   Detail,
   Cart,
+  ElementUILayout,
+  UserDetail,
+  UserList,
 } from './components';
 
 const routes = [{
@@ -13,6 +16,12 @@ const routes = [{
   path: '/detail/:id', component: Detail, name: 'detail'
 }, {
   path: '/cart', component: Cart, name: 'cart'
+}, {
+  path: '/elementui', component: ElementUILayout, name: 'elementui'
+}, {
+  path: '/userList', component: UserList, name: 'userList'
+}, {
+  path: '/userDetail', component: UserDetail, name: 'userDetail'
 }, {
   path: '*', redirect: '/'
 }];

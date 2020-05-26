@@ -27,6 +27,18 @@ export default {
         label: "Shopping Cart",
         to: "/cart"
       },
+      {
+        label: "Element UI",
+        to: "/elementui"
+      },
+      {
+        label: "User List",
+        to: "/userList"
+      },
+      {
+        label: "User Form",
+        to: "/userDetail"
+      },
     ];
   }
 };

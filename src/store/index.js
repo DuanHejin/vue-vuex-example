@@ -10,10 +10,12 @@ import getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-  isLoading: true,
+  isLoading: false,
   objectList: [],
   object: null,
-  cart: []
+  cart: [],
+  userList: [],
+  user: {}
 };
 
 const store = new Vuex.Store({

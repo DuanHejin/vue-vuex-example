@@ -4,13 +4,26 @@ const MutationTypes = {
   ADD_TO_CART : 'ADD_TO_CART',
   CLEAR_CART : 'CLEAR_CART',
   INIT_DETAIL : 'INIT_DETAIL',
+  INIT_USER : 'INIT_USER',
+  GET_USER_LIST : 'GET_USER_LIST',
+  GET_USER_BY_ID : 'GET_USER_BY_ID',
+  ADD_USER : 'ADD_USER',
+  UPDATE_USER : 'UPDATE_USER',
+  DELETE_USER : 'DELETE_USER',
 }
 
 const CommonTypes = {
   TOGGLE_LOADING: 'TOGGLE_LOADING'
 }
 
+const Modes = {
+  INIT: 'INIT',
+  EDIT: 'EDIT',
+  READ: 'READ',
+}
+
 export {
   MutationTypes,
-  CommonTypes
+  CommonTypes,
+  Modes,
 }

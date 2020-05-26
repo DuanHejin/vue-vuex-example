@@ -1,24 +1,24 @@
 <template>
-  <div>
-    <div class="header">
-      <Header></Header>
-    </div>
+  <el-container>
+      <el-header class="header">
+        <Header></Header>
+      </el-header>
 
-    <div class="wrapper">
-      <div class="nav-wrapper">
-        <Nav></Nav>
-      </div>
-
-      <div class="main container">
-        <router-view></router-view>
-      </div>
-    </div>
-  </div>
+      <el-container>
+        <el-aside class="nav-wrapper">
+          <Nav></Nav>
+        </el-aside>
+        
+        <el-main>
+          <router-view></router-view>
+        </el-main>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
-import Nav from "./Nav";
-import Header from "./Header";
+import Nav from "./Nav.vue";
+import Header from "./Header.vue";
 
 export default {
   name: "Home",
@@ -37,20 +37,13 @@ $headerHeight: 60px;
   align-items: center;
   justify-content: flex-end;
   height: $headerHeight;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DCDFE6;
 }
 
-.wrapper {
-  display: flex;
 
-  .nav-wrapper {
-    width: 300px;
-    min-height: calc(100vh - #{$headerHeight});
-    border-right: 1px solid #cccccc;
-  }
-  .main {
-    flex: 1;
-    margin-top: 20px;
-  }
+.nav-wrapper {
+  width: 300px;
+  min-height: calc(100vh - #{$headerHeight});
+  border-right: 1px solid #DCDFE6;
 }
 </style>

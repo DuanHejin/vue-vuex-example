@@ -1,11 +1,23 @@
 <template>
   <div>
-    <div>
+    <!-- <div>
       <button class="btn btn-default" @click="goBack">Back</button>
       <button class="btn btn-default" :disabled="!object" @click="addToCart(object)">Add To Cart</button>
+    </div> -->
+    <div>
+      <el-page-header @back="goBack" class="detail-page-header">
+        <span slot="title">
+          Back
+        </span>
+        <span slot="content">
+          <button class="btn btn-default" :disabled="!object" @click="onClickAdd(object)">Add To Cart</button>
+        </span>
+      </el-page-header>
+
     </div>
     <hr>
-    <div v-if="!isLoading">
+    <pre>{{object}}</pre>
+    <div v-if="!isLoading && object">
       <form class="form form-horizontal">
         <div class="form-group">
           <label for="" class="control-label col-md-3">ID</label>
@@ -69,12 +81,24 @@ export default {
     goTo: function (id) {
       this.$router.push({name: 'detail', params: {id}});
     },
+    onClickAdd: function (object) {
+      this.addToCart(object).then(() => {
+        this.successNotification();
+      });
+    },
     ...mapActions({
-      getObj: MutationTypes.GET_OBJECT_BY_ID
+      getObj: MutationTypes.GET_OBJECT_BY_ID,
+      addToCart: MutationTypes.ADD_TO_CART,
     }),
     ...mapMutations({
-      addToCart: MutationTypes.ADD_TO_CART
     }),
+    successNotification() {
+      this.$notify({
+        title: 'Successfully',
+        message: 'Add to cart successfully!',
+        type: 'success',
+      });
+    },
   },
   computed: {
     ...mapState([
@@ -92,5 +116,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.detail-page-header {
+  align-items: center;
+}
 </style>
