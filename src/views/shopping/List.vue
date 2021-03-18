@@ -27,7 +27,7 @@
 
 <script>
 import { mapActions, mapState, mapMutations } from "vuex";
-import { MutationTypes } from "../constants";
+import { MutationTypes } from "../../constants";
 
 export default {
   name: "List",

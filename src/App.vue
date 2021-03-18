@@ -5,23 +5,24 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import { mapState } from 'vuex'
+import { Home } from "./views/home";
+import { mapState } from "vuex";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home
+    Home,
   },
   computed: {
-    ...mapState(['isLoading'])
-  }
-}
+    ...mapState(["isLoading"]),
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -31,8 +32,7 @@ button + button {
   margin-left: 10px;
 }
 
-table.table-vertical-middle > tbody > tr > td{
+table.table-vertical-middle > tbody > tr > td {
   vertical-align: middle;
 }
-
 </style>

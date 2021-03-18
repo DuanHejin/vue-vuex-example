@@ -29,7 +29,7 @@ import {
   // mapState,
    mapActions, mapGetters } from "vuex";
 import { MutationTypes } from "../../constants";
-import { showSuccess, showError } from '../utils';
+import { showSuccess, showError } from '../../utils/index';
 
 export default {
   name: "UserList",

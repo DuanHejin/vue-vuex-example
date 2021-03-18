@@ -56,9 +56,9 @@
 </template>
 
 <script>
-import { Loading } from './common';
+import { Loading } from '../../components/common';
 import { mapState, mapMutations, mapActions } from 'vuex';
-import { MutationTypes } from '../constants';
+import { MutationTypes } from '../../constants';
 
 export default {
   name: 'Detail',

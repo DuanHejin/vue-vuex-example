@@ -70,7 +70,7 @@
 import { mapActions, mapMutations, mapState } from "vuex";
 import { MutationTypes, Modes } from "../../constants";
 import { sexOptions, favoriteOptions, regionOptions } from "./options";
-import { showSuccess, showError } from '../utils';
+import { showSuccess, showError } from '../../utils/index';
 
 export default {
   name: "UserDetail",

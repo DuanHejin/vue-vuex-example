@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { login, logout, isLoggedIn } from "../services/AuthService";
+import { login, logout, isLoggedIn } from "../../services/AuthService";
 
 export default {
   name: "Header",

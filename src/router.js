@@ -1,12 +1,7 @@
 import Router from 'vue-router';
-import {
-  List,
-  Detail,
-  Cart,
-  ElementUILayout,
-  UserDetail,
-  UserList,
-} from './components';
+import { ElementUILayout } from './views/elementUIDemo';
+import { List, Detail, Cart } from './views/shopping';
+import { UserList, UserDetail } from './views/userManage';
 
 const routes = [{
   path: '/', redirect: '/list'
@@ -26,4 +21,4 @@ const routes = [{
   path: '*', redirect: '/'
 }];
 
-export default new Router({routes});
+export default new Router({ routes });

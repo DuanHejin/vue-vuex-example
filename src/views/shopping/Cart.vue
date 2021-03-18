@@ -34,7 +34,7 @@
 
 <script>
 import { mapMutations, mapGetters } from 'vuex';
-import { MutationTypes } from '../constants';
+import { MutationTypes } from '../../constants';
 
 export default {
   name: 'Cart',
