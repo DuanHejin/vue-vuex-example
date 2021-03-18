@@ -39,6 +39,10 @@ export default {
         label: "User Form",
         to: "/userDetail"
       },
+      {
+        label: "Parent And Child",
+        to: "/parentAndChild"
+      },
     ];
   }
 };

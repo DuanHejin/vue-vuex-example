@@ -1,5 +1,6 @@
 import Router from 'vue-router';
 import { ElementUILayout } from './views/elementUIDemo';
+import { Parent } from './views/parentAndChild';
 import { List, Detail, Cart } from './views/shopping';
 import { UserList, UserDetail } from './views/userManage';
 
@@ -17,6 +18,8 @@ const routes = [{
   path: '/userList', component: UserList, name: 'userList'
 }, {
   path: '/userDetail', component: UserDetail, name: 'userDetail'
+}, {
+  path: '/parentAndChild', component: Parent, name: 'parentAndChild'
 }, {
   path: '*', redirect: '/'
 }];
