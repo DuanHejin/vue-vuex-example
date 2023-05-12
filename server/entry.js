@@ -1,6 +1,6 @@
 const { registObjectService } = require('./services/objectService');
 const { registUserService } = require('./services/userService');
-const {db} = require('./database/connection');;
+const {db} = require('./database/connection');
 db();
 
 const entry = (apiRouter) => {
