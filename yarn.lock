@@ -915,6 +915,11 @@
   resolved "https://registry.npm.taobao.org/@types/q/download/@types/q-1.5.2.tgz?cache=0&sync_timestamp=1580864636491&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fq%2Fdownload%2F%40types%2Fq-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha1-aQoUdbhPKohP0HzXl8APXzE1bqg=
 
+"@volcengine/veplayer@1.8.1":
+  version "1.8.1"
+  resolved "https://npmjs.meipian.me/@volcengine/veplayer/-/veplayer-1.8.1.tgz#431dab3f5abad4f73be5cc2659734c69fbce3c6a"
+  integrity sha512-EsB8BnpzUBxA/pT6UsUzVqGJMEB6pcWLLLEF0Mp/w/TJFM4QFURmI07y2hrEx9HTlR7yvthBzZVx4iNxdldN0w==
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.0.0.tgz#048fe579958da408fb7a8b2a3ec050b50a661040"

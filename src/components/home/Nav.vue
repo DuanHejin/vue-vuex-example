@@ -43,6 +43,10 @@ export default {
         label: "Parent And Child",
         to: "/parentAndChild"
       },
+      {
+        label: "Veplayer",
+        to: "/veplayer"
+      },
     ];
   }
 };

@@ -4,6 +4,9 @@ import { Parent } from './views/parentAndChild';
 import { List, Detail, Cart } from './views/shopping';
 import { UserList, UserDetail } from './views/userManage';
 
+import Veplayer from './views/veplayer/index.vue'
+
+
 const routes = [{
   path: '/', redirect: '/list'
 }, {
@@ -20,6 +23,8 @@ const routes = [{
   path: '/userDetail', component: UserDetail, name: 'userDetail'
 }, {
   path: '/parentAndChild', component: Parent, name: 'parentAndChild'
+}, {
+  path: '/veplayer', component: Veplayer, name: 'veplayer'
 }, {
   path: '*', redirect: '/'
 }];
